@@ -135,7 +135,7 @@ class Country(models.Model):
         
         
 #Category Model
-class Category(models.Model):
+class Category_Detail(models.Model):
     Pandit_Category_Name  =   models.CharField(max_length =   50,null=True, blank=True)
     
     def __unicode__(self):
@@ -165,7 +165,7 @@ class Pathashala(models.Model):
 class Guru(models.Model):
     Guru_Id   = models.CharField(max_length=10, null=False, blank=False)
     Guru_Name   = models.CharField(max_length   =   100)
-    Category         =  models.ForeignKey(Category)
+    Category         =  models.ForeignKey(Category_Detail)
     Age  =   models.IntegerField(max_length=3, null=True, blank=True)
     Serving_Patashala   = models.ForeignKey(Pathashala,null=True, blank=True)
     Guru_Address       =   models.TextField(blank=False)
@@ -197,8 +197,8 @@ class Student(models.Model):
     Kramaha         =   models.ForeignKey(Kramaha)
     Stharaha        =   models.ForeignKey(Stharaha)
     TotalQuestions  =   models.ForeignKey(TotalQuestion)
-    Permanent_Address          =   models.TextField(blank=False)
-    Present_Address          =   models.TextField(blank=False)
+    Permanent_Address   =   models.TextField(blank=False)
+    Present_Address     =   models.TextField(blank=False)
     Place           =   models.ForeignKey(Place,null=True, blank=True)
     District        =   models.ForeignKey(District,null=True, blank=True)
     Pincode         =   models.IntegerField(max_length =  10,null=True, blank=True)

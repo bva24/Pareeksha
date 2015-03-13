@@ -1,0 +1,10 @@
+from django.shortcuts import render
+from register.models import *
+# Create your views here.
+
+def register(request):
+	if request.method == 'POST':
+		name = str(request.POST.get('name',''))
+		reg = Registration()
+		reg.save()
+	return render(request,'register/register.html',{})
