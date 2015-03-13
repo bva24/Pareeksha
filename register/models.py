@@ -1,4 +1,7 @@
 from django.db import models
+# Imported Date Time for calculation of AGE
+from django.utils import timezone
+ 
 
 # Create your models here.
 
@@ -45,9 +48,9 @@ class Exam(models.Model):
         return self.Exam_Name
 
 
-#Exam-Name Short Form Model
+# Short Exam-Name Form Model
 class ShortExamName(models.Model):
-    Exam_Short_Name  =   models.CharField(max_length =   10,null=True, blank=True)
+    Exam_Short_Name  =   models.CharField(max_length =   100,null=True, blank=True)
     
     def __unicode__(self):
         return self.Exam_Short_Name 
@@ -79,7 +82,7 @@ class TotalQuestion(models.Model):
 
 #Sambhavana() Model
 class Sambhavana(models.Model):
-    Sambhavana  =   models.IntegerField(max_length=10, null=False, blank=False)
+    Sambhavana  =   models.CharField(max_length=10, null=False, blank=False)
     
     def __unicode__(self):
         return self.Sambhavana
@@ -88,7 +91,7 @@ class Sambhavana(models.Model):
 
 #Special_Prathama_Sambhavana() Model
 class SpecialPrathamaSambhavana(models.Model):
-    Special_Prathama_Sambhavana  =   models.IntegerField(max_length=10, null=False, blank=False)
+    Special_Prathama_Sambhavana  =   models.CharField(max_length=10, null=False, blank=False)
     
     def __unicode__(self):
         return self.Special_Prathama_Sambhavana
@@ -96,7 +99,7 @@ class SpecialPrathamaSambhavana(models.Model):
         
 #Special_Uttama_Sambhavana() Model
 class Special_Uttama_Sambhavana(models.Model):
-    Special_Prathama_Sambhavana  =   models.IntegerField(max_length=10, null=False, blank=False)
+    Special_Uttama_Sambhavana  =   models.CharField(max_length=10, null=False, blank=False)
     
     def __unicode__(self):
         return self.Special_Uttama_Sambhavana
@@ -146,7 +149,7 @@ class Category_Detail(models.Model):
 #Pathashala Model
 class Pathashala(models.Model):
     Pathashala_Name  =   models.CharField(max_length =   100,null=True, blank=True)
-    Address         =   models.TextField(blank=False)
+    Address         =   models.TextField(blank=True)
     Place           =   models.ForeignKey(Place,null=True, blank=True)
     District        =   models.ForeignKey(District,null=True, blank=True)
     Pincode         =   models.IntegerField(max_length =  10,null=True, blank=True)

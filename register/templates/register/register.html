@@ -1,33 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>SGS Ashrama Veda Vibhagha</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<div class="container">
-  <div class="jumbotron">
-    <h1><center><b><font color = "Orange"> Avadhoota Datta Peetham</font></b></center></h1> 
-    <h2><center><b><font color = "Orange">Veda Vibhagaha</font></b></center><h2> 
-</div>
-<div> 
-     <ul class="nav nav-pills">
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact Us</a></li>
-  </ul>
-</div>
-
-<div>
-  <marquee><b><font color = "red">Registration Open for Veda Examinations 2015</b></font></marquee>
-</div>
-  
-  <div class="row">
+{% extends "register/master-template.html" %}
+  {% block main %}
     <div class="col-sm-8">
       <h3><b>Introduction</b></h3>
       <p>Welcome to SGS Annual Veda Examination Page</p>
@@ -35,23 +7,7 @@
     </div>
     <div class="col-sm-4">
       <h3><b>Examination Section</b></h3>
-      <p>Click Here to Register for Veda Examination 2015</p>
+      <p><a href="add-student">Click Here</a> to Register for Veda Examination 2015</p>
     </div>
-    
-  </div>
-</div>
-
-<div id="footer">
-      <div class="container">
-<p><center>All Rights Reserved! 2015-SGS Ashrama-Dattanagar-Mysore</center></p>
-      </div>
-    </div>
-    
-    
-<!--<footer>
-<p><center>All Rights Reserved! 2015-SGS Ashrama-Dattanagar-Mysore</center></p>
-</footer>
--->
-</body>
-</html>
-
+   {% endblock %}
+  

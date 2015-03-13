@@ -6,29 +6,29 @@ from register.models import *
 
 # Student Model Form  -> Form name == Model name 
 
-class Student(ModelForm):
+class Student_Form(ModelForm):
     class Meta:
         model = Student
         fields = ['Student_ID',
                   'Student_Name',
-                  'Father_Name'
-                  'Date_of_Birth'
-                  'Age'
-                  'Patashala_Name_If_Applicable'
-                  'Guru_Details'
-                  'Veda_Shakha'
-                  'Exam_Short_Name'
-                  'Kramaha'
-                  'Stharaha'
-                  'TotalQuestions'
-                  'Permanent_Address'
-                  'Present_Address'
-                  'Place'
-                  'District'
-                  'Pincode'
-                  'State'
-                  'Country'
-                  'LandLine_Num'
+                  'Father_Name',
+                  'Date_of_Birth',
+                  'Age',
+                  'Patashala_Name_If_Applicable',
+                  'Guru_Details',
+                  'Veda_Shakha',
+                  'Exam_Short_Name',
+                  'Kramaha',
+                  'Stharaha',
+                  'TotalQuestions',
+                  'Permanent_Address',
+                  'Present_Address',
+                  'Place',
+                  'District',
+                  'Pincode',
+                  'State',
+                  'Country',
+                  'LandLine_Num',
                   'Mobile_Num']
                   
                   
